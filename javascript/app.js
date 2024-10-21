@@ -1,7 +1,21 @@
 import fetchJokes from "./api.js";
-import { displayJokes, displayError } from "./ui.js";
+import { displayJokes, displayError } from "./dom.js";
+/*
+FOR A SINGLE RANDOM QUOTE USING INITAL BUTTON
+*/
+document.getElementById("getJokeBtn").addEventListener("click", async () => {
+    try {
+        const jokes = await fetchJokes("random", "one");
 
-// Listen for the form submission to fetch jokes
+        displayJokes(jokes);
+    } catch (error) {
+        displayError();
+    }
+
+});
+/*
+FOR 1, 5, OR 10 JOKES IN DIFFERENT CATEGORIES USING FORM
+*/
 document
   .getElementById("jokeCategoryForm")
   .addEventListener("submit", async function (event) {
