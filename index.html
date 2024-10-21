@@ -54,5 +54,35 @@
     <!-- Output based on user input -->
     <div id="jokesContainer"></div>
 
+    <h2>Got an idea for a New Joke?</h2>
+<form id="addJokeForm">
+    <div class="jokeCategories" id="typeInput">
+        <label>
+          <input type="radio" name="category" value="general" checked />
+          General
+        </label>
+        <label>
+          <input type="radio" name="category" value="knock-knock" />
+          Knock-Knock
+        </label>
+        <label>
+          <input type="radio" name="category" value="programming" />
+          Programming
+        </label>
+        <label>
+          <input type="radio" name="category" value="dad" />
+          Dad
+        </label>
+    </div>
+
+  <label for="setupInput">Setup:</label>
+  <input type="text" id="setupInput" name="setupInput" required />
+  
+  <label for="punchlineInput">Punchline:</label>
+  <input type="text" id="punchlineInput" name="punchlineInput" required />
+  
+  <button type="submit">Add Joke</button>
+</form>
+
   </body>
 </html>

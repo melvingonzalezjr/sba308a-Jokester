@@ -1,5 +1,6 @@
 // Function to fetch jokes based on the selected category and quantity
-export default async function fetchJokes(category, quantity) {
+
+export async function fetchJokes(category, quantity) {
   let apiUrl = "";
 
   if (quantity === "one") {
@@ -37,6 +38,36 @@ export default async function fetchJokes(category, quantity) {
     return jokes; // Return all 10 jokes when quantity = 'ten'
   } catch (error) {
     console.error("Error fetching jokes:", error);
+    throw error;
+  }
+}
+
+/*
+FUNCTION TO ADD JOKE
+    - NOTE: Found out after nearly finishing project, the official joke API does not allow for POST requests. A Google search shows I can replicate the situation by using json-server to mock the API and test it locally.
+    - I added the jokes from the Official Jokes API repo to a document called jokeDB.json. From here on out, urls will be based on my local-server NOT the official jokes API. I will be able to show the same functionality w/o posting to the actual API.
+
+*/
+export async function addJoke(newJoke) {
+  const apiUrl = "http://localhost:5000/jokes";
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newJoke)
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to add joke.");
+    }
+
+    const joke = await response.json();
+    return joke;
+  } catch (error) {
+    console.error("Error adding joke:", error);
     throw error;
   }
 }
