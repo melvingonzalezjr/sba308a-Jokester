@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./javascript/app.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Jokester</title>
+  </head>
+  <body>
+    <h1>Welcome to Jokester!</h1>
+    <button id="getJokeBtn">Get a Joke</button>
+    <p>Use the above to get one random joke.</p>
+
+    <h2>Want more?</h2>
+    <form id="jokeCategoryForm">
+      <div class="jokeCategories">
+        <label>
+          <input type="radio" name="category" value="general" checked />
+          General
+        </label>
+        <label>
+          <input type="radio" name="category" value="knock-knock" />
+          Knock-Knock
+        </label>
+        <label>
+          <input type="radio" name="category" value="programming" />
+          Programming
+        </label>
+        <label>
+          <input type="radio" name="category" value="dad" />
+          Dad
+        </label>
+      </div>
+      <div class="quantityJokes">
+        <label>
+            <input type="radio" name="quantity" value="one"/>
+            1
+        </label>
+        <label>
+            <input type="radio" name="quantity" value="five"/>
+            5
+        </label>
+        <label>
+            <input type="radio" name="quantity" value="ten"/>
+            10
+        </label>
+      </div>
+      <button type="submit">Get Jokes</button>
+    </form>
+
+    <div id="jokesContainer"></div>
+  </body>
+</html>
