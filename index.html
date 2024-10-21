@@ -9,80 +9,84 @@
   </head>
   <body>
     <!-- Intro. Simple button for one random joke -->
-    <h1>Welcome to Jokester!</h1>
-    <button id="getJokeBtn">Get a Joke</button>
-    <p>Use the above to get one random joke.</p>
+    <header>
+      <h1>Welcome to Jokester!</h1>
+    </header>
 
-    <!-- A little more interaction. User can select a category of joke (general, knock-knock. programming, dad) and a specific quantity of jokes (1, 5, 10) -->
-    <h2>Want more?</h2>
-    <form id="jokeCategoryForm">
-      <div class="jokeCategories">
-        <label>
-          <input type="radio" name="category" value="general" checked />
-          General
-        </label>
-        <label>
-          <input type="radio" name="category" value="knock-knock" />
-          Knock-Knock
-        </label>
-        <label>
-          <input type="radio" name="category" value="programming" />
-          Programming
-        </label>
-        <label>
-          <input type="radio" name="category" value="dad" />
-          Dad
-        </label>
-      </div>
-      <div class="quantityJokes">
-        <label>
-            <input type="radio" name="quantity" value="one" checked/>
+    <main>
+      <button id="getJokeBtn">Get a Joke</button>
+      <p>Use the above button to get one random joke.</p>
+
+      <!-- A little more interaction. User can select a category of joke (general, knock-knock. programming, dad) and a specific quantity of jokes (1, 5, 10) -->
+      <h2>Want more?</h2>
+      <form id="jokeCategoryForm">
+        <div class="jokeCategories">
+          <label>
+            <input type="radio" name="category" value="general" checked />
+            General
+          </label>
+          <label>
+            <input type="radio" name="category" value="knock-knock" />
+            Knock-Knock
+          </label>
+          <label>
+            <input type="radio" name="category" value="programming" />
+            Programming
+          </label>
+          <label>
+            <input type="radio" name="category" value="dad" />
+            Dad
+          </label>
+        </div>
+        <div class="quantityJokes">
+          <label>
+            <input type="radio" name="quantity" value="one" checked />
             1
-        </label>
-        <label>
-            <input type="radio" name="quantity" value="five"/>
+          </label>
+          <label>
+            <input type="radio" name="quantity" value="five" />
             5
-        </label>
-        <label>
-            <input type="radio" name="quantity" value="ten"/>
+          </label>
+          <label>
+            <input type="radio" name="quantity" value="ten" />
             10
-        </label>
-      </div>
-      <button type="submit">Get Jokes</button>
-    </form>
+          </label>
+        </div>
+        <button type="submit">Get Jokes</button>
+      </form>
 
-    <!-- Output based on user input -->
-    <div id="jokesContainer"></div>
+      <!-- Output based on user input -->
+      <div id="jokesContainer"></div>
 
-    <h2>Got an idea for a New Joke?</h2>
-<form id="addJokeForm">
-    <div class="jokeCategories" id="typeInput">
-        <label>
-          <input type="radio" name="category" value="general" checked />
-          General
-        </label>
-        <label>
-          <input type="radio" name="category" value="knock-knock" />
-          Knock-Knock
-        </label>
-        <label>
-          <input type="radio" name="category" value="programming" />
-          Programming
-        </label>
-        <label>
-          <input type="radio" name="category" value="dad" />
-          Dad
-        </label>
-    </div>
+      <h2>Got an idea for a New Joke?</h2>
+      <form id="addJokeForm">
+        <div class="jokeCategories" id="typeInput">
+          <label>
+            <input type="radio" name="category" value="general" checked />
+            General
+          </label>
+          <label>
+            <input type="radio" name="category" value="knock-knock" />
+            Knock-Knock
+          </label>
+          <label>
+            <input type="radio" name="category" value="programming" />
+            Programming
+          </label>
+          <label>
+            <input type="radio" name="category" value="dad" />
+            Dad
+          </label>
+        </div>
 
-  <label for="setupInput">Setup:</label>
-  <input type="text" id="setupInput" name="setupInput" required />
-  
-  <label for="punchlineInput">Punchline:</label>
-  <input type="text" id="punchlineInput" name="punchlineInput" required />
-  
-  <button type="submit">Add Joke</button>
-</form>
+        <label for="setupInput">Setup:</label>
+        <input type="text" id="setupInput" name="setupInput" required />
 
+        <label for="punchlineInput">Punchline:</label>
+        <input type="text" id="punchlineInput" name="punchlineInput" required />
+
+        <button type="submit">Add Joke</button>
+      </form>
+    </main>
   </body>
 </html>

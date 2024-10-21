@@ -12,9 +12,9 @@ export function displayJokes(jokes) {
     */
   jokes.forEach((joke) => {
     const jokeElement = document.createElement("div");
-    jokeElement.classList.add("joke");
+    jokeElement.classList.add("joke");  //Remember: each joke card referenced by id "joke" now
     jokeElement.innerHTML = `
-        <p><strong>${joke.setup}</strong></p>
+        <p ><strong>${joke.setup}</strong></p>
         <p>${joke.punchline}</p>
       `;
     jokesContainer.appendChild(jokeElement); //remember you gotta finish with appending the child to the DOM element you're editing
