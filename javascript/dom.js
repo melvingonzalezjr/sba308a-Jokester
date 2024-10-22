@@ -1,7 +1,7 @@
 // Function to display jokes
 export function displayJokes(jokes) {
   const jokesContainer = document.getElementById("jokesContainer");
-  jokesContainer.innerHTML = ""; // refreshed output from previous jokes
+//   jokesContainer.innerHTML = ""; // refreshed output from previous jokes
 
   /*
     For each element of jokes array:
@@ -26,3 +26,21 @@ export function displayError() {
   const jokesContainer = document.getElementById("jokesContainer");
   jokesContainer.innerHTML = "<p>Error loading jokes. Please try again.</p>";
 }
+
+//function to display user-created jokes
+export function displayNewJoke(joke) {
+    const jokesContainer = document.getElementById("userCreatedJokesContainer");
+  
+    //test
+    console.log("Displaying new joke:", joke);
+  
+    const jokeElement = document.createElement("div");
+    jokeElement.classList.add("joke");
+    jokeElement.innerHTML = `
+      <p><strong>${joke.setup}</strong></p>
+      <p>${joke.punchline}</p>
+    `;
+  
+    jokesContainer.appendChild(jokeElement); // Append the joke to the container
+    console.log("New joke displayed");
+  }

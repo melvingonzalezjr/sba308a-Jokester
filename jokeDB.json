@@ -2707,10 +2707,22 @@
       "id": "fdcb"
     },
     {
-      "id": "82b9",
-      "type": "dad",
+      "id": "ebcb",
+      "type": "general",
+      "setup": "Blah",
+      "punchline": "Blah"
+    },
+    {
+      "id": "99ae",
+      "type": "general",
       "setup": "What did Baby Corn say to Mom Corn?",
       "punchline": "Where's Pop Corn?"
+    },
+    {
+      "id": "695b",
+      "type": "dad",
+      "setup": "Why the PC enjoy pushing his wife's buttons?",
+      "punchline": "to compute-her"
     }
   ]
 }

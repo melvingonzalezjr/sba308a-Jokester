@@ -27,7 +27,7 @@
           </label>
           <label>
             <input type="radio" name="category" value="knock-knock" />
-            Knock-Knock
+            Knock-Knock (only 5 total)
           </label>
           <label>
             <input type="radio" name="category" value="programming" />
@@ -35,7 +35,7 @@
           </label>
           <label>
             <input type="radio" name="category" value="dad" />
-            Dad
+            Dad (only 2 total)
           </label>
         </div>
         <div class="quantityJokes">
@@ -55,7 +55,7 @@
         <button type="submit">Get Jokes</button>
       </form>
 
-      <!-- Output based on user input -->
+      <!-- Output based on API calls -->
       <div id="jokesContainer"></div>
 
       <h2>Got an idea for a New Joke?</h2>
@@ -87,6 +87,10 @@
 
         <button type="submit">Add Joke</button>
       </form>
+
+      <!-- Output based on user-created jokes -->
+      <div id="userCreatedJokesContainer"></div>
+
     </main>
   </body>
 </html>
