@@ -1,7 +1,7 @@
 // Function to display jokes
 export function displayJokes(jokes) {
   const jokesContainer = document.getElementById("jokesContainer");
-//   jokesContainer.innerHTML = ""; // refreshed output from previous jokes
+jokesContainer.innerHTML = ""; // refreshed output from previous jokes
 
   /*
     For each element of jokes array:
